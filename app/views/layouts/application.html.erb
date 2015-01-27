@@ -45,11 +45,11 @@
   <div class="nav navbar-nav navbar-right">
       <div class="btn-group lang">
         <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-          English <span class="caret"></span>
+          <%= t 'lang.title'%> <span class="caret"></span>
         </button>
         <ul class="dropdown-menu" role="menu">
-          <li><a href="#">English</a></li>
-          <li><a href="#">Khmer</a></li>
+          <li><%= link_to_unless_current "#{ t 'lang.eng'}", locale: "en" %></li>
+          <li><%= link_to_unless_current "#{t 'lang.kh'}", locale: "km" %></li>
         </ul>
       </div>
         <ul class="nav navbar-nav navbar-right">
